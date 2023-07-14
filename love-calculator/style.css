@@ -1,0 +1,141 @@
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1 {
+    font-size: 1.78947rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 0%;
+}
+
+span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    width: 50%;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+li {
+    float: left;
+}
+
+li {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li:hover {
+    color: red;
+}
+
+.title {
+    color: #E54A0D;
+    padding-left: 150px;
+    padding-right: 400px;
+    font-size: 50px;
+    font-family: 'Fasthand', cursive;
+}
+
+.links {
+    color: #373B4D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form {
+    padding: 55px 30px 30px;
+}
+
+.row-names {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.name-label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    border-radius: 30px 30px;
+    height: 60px;
+    font-size: 1rem;
+    text-align: center;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    border-style: none;
+    z-index: 1;
+    line-height: 23px;
+    outline: none !important;
+    width: 400px;
+
+}
+
+.calculate {
+    margin-top: 20px;
+}
+
+.form-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 0;
+    opacity: 0.1;
+
+}
+
+button {
+    color: white;
+    font-weight: 600;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    height: 60px;
+    padding: 0 30px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 60px;
+    border: none;
+}
+
+.button-calc:hover {
+    opacity: 0.8;
+}
+
+.button-calc {
+    background: -webkit-linear-gradient(left, #c7081f 0%, #ec5700 100%);
+    background: -o-linear-gradient(left, #c7081f 0%, #ec5700 100%);
+    background: linear-gradient(90deg, #c7081f 0%, #ec5700 100%);
+}
