@@ -41,3 +41,16 @@ function getMilk(money) {
 }
 
 getMilk(5.50);
+
+prompt("What is your name?");
+prompt("What is your crush's name?");
+
+var loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore) + 1;
+
+if (loveScore > 70){
+  alert("Your love score is " + loveScore + "%. You love each other like Kanye loves Kanye.");
+} else{
+  alert("Your love score is " + loveScore + "%.");
+}
+
