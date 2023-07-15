@@ -88,3 +88,20 @@ for (let i = 1; i < 101; i++){
   }
   
 }
+
+
+// var heading = document.lastElementChild.firstElementChild
+// heading.innerHTML="Good bye";
+
+
+// document.querySelector("ul").lastElementChild.innerHTML = "Jessieee";
+
+
+// var items = document.querySelectorAll("li");
+// undefined
+// items[0].firstElementChild.color = "red";
+
+// items[0].firstElementChild
+// <a href=​"https:​/​/​wwww.google.com">​Google​</a>​
+// items[0].firstElementChild.style.color = "red";
+/
