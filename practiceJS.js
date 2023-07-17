@@ -104,4 +104,24 @@ for (let i = 1; i < 101; i++){
 // items[0].firstElementChild
 // <a href=​"https:​/​/​wwww.google.com">​Google​</a>​
 // items[0].firstElementChild.style.color = "red";
-/
+
+// working with higher order functions
+function add(num1, num2){
+  return num1+num2;
+}
+
+function divide(num1, num2){
+  return num1/num2;
+}
+
+function multiply(num1, num2){
+  return num1*num2;
+}
+
+function subtract(num1, num2){
+  return num1+num2;
+}
+
+function calculator(num1, num2, operator){
+  return operator(num1, num2);
+}
