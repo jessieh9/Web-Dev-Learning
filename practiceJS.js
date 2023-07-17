@@ -136,11 +136,16 @@ function calculator(num1, num2, operator){
 
 // houseMaid1.name;
 
-// constructor function
+// constructor function (acts like a class - i think)
 function HouseMaid(name, yearsofExperience, duties){
   this.name = name;
   this.yearsofExperience = yearsofExperience;
   this.duties = duties;
+  this.clean = function () {
+    alert("Cleaning in progress...");
+  }
 }
 
 var houseMaid2 = new HouseMaid("Mary", 20, ["stairs", "kitchen"]);
+
+houseMaid2.clean();
