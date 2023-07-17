@@ -125,3 +125,22 @@ function subtract(num1, num2){
 function calculator(num1, num2, operator){
   return operator(num1, num2);
 }
+
+// working with data structure (dictionary)
+// var houseMaid1 = {
+//   name: "Maria",
+//   yearofExperience: 12,
+//   duties: ["bathroom", "lobby", "bedroom"]
+  
+// }
+
+// houseMaid1.name;
+
+// constructor function
+function HouseMaid(name, yearsofExperience, duties){
+  this.name = name;
+  this.yearsofExperience = yearsofExperience;
+  this.duties = duties;
+}
+
+var houseMaid2 = new HouseMaid("Mary", 20, ["stairs", "kitchen"]);
