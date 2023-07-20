@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+input[type="submit"] {
+    background-color: gray;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+}
+
+input[type="text"] {
+    height: 20px;
+    width: 200px;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    opacity: 0.7;
+}
