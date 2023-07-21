@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <!-- bootstrap navbar -->
+    <header>
+        <nav class="navbar navbar-expand-custom navbar-mainbg ">
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="far fa-calendar-alt"></i>Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/work"><i class="far fa-clone"></i>Work</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="items-list" id="title">
+            <h1>
+                <%= day %>, <%- month %>
+                        <%= date %>
+            </h1>
+        </div>
+        <div class="items-list">
+            <% for (let i=0; i < itemList.length; i++){ %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%= itemList[i] %>
+                    </p>
+                </div>
+                <% } %>
+                    <form class="item" action="/" method="post">
+                        <input type="text" name="newItem" placeholder="New Item">
+                        <button type="submit" name="list" value="<%= typeofList %>">+</button>
+                    </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+        Made with blood, sweat, and tears
+    </footer>
+</body>
+
+</html>
