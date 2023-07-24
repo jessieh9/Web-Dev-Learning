@@ -1,4 +1,3 @@
-// HINTS:
 // 1. Import express and axios
 import axios from "axios";
 import express from "express";
