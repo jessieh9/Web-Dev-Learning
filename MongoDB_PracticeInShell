@@ -1,0 +1,271 @@
+Last login: Wed Jul 26 20:54:22 on ttys004
+jessiehe@Jessies-MacBook-Air ~ % mongo
+zsh: command not found: mongo
+jessiehe@Jessies-MacBook-Air ~ % mongod
+{"t":{"$date":"2023-07-26T21:18:03.871-06:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"-","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+{"t":{"$date":"2023-07-26T21:18:03.871-06:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"-","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2023-07-26T21:18:03.873-06:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"thread1","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"thread1","msg":"Multi threading initialized"}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":20576,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"Jessies-MacBook-Air.local"}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":23352,   "ctx":"initandlisten","msg":"Unable to resolve sysctl {sysctlName} (number) ","attr":{"sysctlName":"hw.cpufrequency"}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":23351,   "ctx":"initandlisten","msg":"{sysctlName} unavailable","attr":{"sysctlName":"machdep.cpu.features"}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.6","gitVersion":"26b4851a412cc8b9b4a18cdb6cd0f9f642e06aa7","modules":[],"allocator":"system","environment":{"distarch":"aarch64","target_arch":"aarch64"}}}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Mac OS X","version":"21.6.0"}}}
+{"t":{"$date":"2023-07-26T21:18:03.874-06:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"NETWORK",  "id":5693100, "ctx":"initandlisten","msg":"Asio socket.set_option failed with std::system_error","attr":{"note":"acceptor TCP fast open","option":{"level":6,"name":261,"data":"00 04 00 00"},"error":{"what":"set_option: Invalid argument","message":"Invalid argument","category":"asio.system","value":22}}}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"E",  "c":"CONTROL",  "id":20568,   "ctx":"initandlisten","msg":"Error setting up listener","attr":{"error":{"code":9001,"codeName":"SocketException","errmsg":"Address already in use"}}}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"initandlisten","msg":"Attempting to enter quiesce mode"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"-",        "id":6371601, "ctx":"initandlisten","msg":"Shutting down the FLE Crud thread pool"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"initandlisten","msg":"Shutting down the ServiceEntryPoint"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"initandlisten","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"initandlisten","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"initandlisten","msg":"Shutting down the TTL monitor"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"initandlisten","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"initandlisten","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"initandlisten","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"initandlisten","msg":"Now exiting"}
+{"t":{"$date":"2023-07-26T21:18:03.875-06:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"initandlisten","msg":"Shutting down","attr":{"exitCode":48}}
+jessiehe@Jessies-MacBook-Air ~ % mongo
+zsh: command not found: mongo
+jessiehe@Jessies-MacBook-Air ~ % mongosh
+Current Mongosh Log ID:	64c1e267e2ace5294f4aa624
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1
+Using MongoDB:		6.0.6
+Using Mongosh:		1.10.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2023-07-26T21:15:07.870-06:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-07-26T21:15:07.870-06:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+   2023-07-26T21:15:07.870-06:00: Soft rlimits for open file descriptors too low
+------
+
+test> help
+
+  Shell Help:
+
+    use                                        Set current database
+    show                                       'show databases'/'show dbs': Print a list of all available databases.
+                                               'show collections'/'show tables': Print a list of all collections for current database.
+                                               'show profile': Prints system.profile information.
+                                               'show users': Print a list of all users for current database.
+                                               'show roles': Print a list of all roles for current database.
+                                               'show log <type>': log for current connection, if type is not set uses 'global'
+                                               'show logs': Print all logs.
+
+    exit                                       Quit the MongoDB shell with exit/exit()/.exit
+    quit                                       Quit the MongoDB shell with quit/quit()
+    Mongo                                      Create a new connection and return the Mongo object. Usage: new Mongo(URI, options [optional])
+    connect                                    Create a new connection and return the Database object. Usage: connect(URI, username [optional], password [optional])
+    it                                         result of the last line evaluated; use to further iterate
+    version                                    Shell version
+    load                                       Loads and runs a JavaScript file into the current shell environment
+    enableTelemetry                            Enables collection of anonymous usage data to improve the mongosh CLI
+    disableTelemetry                           Disables collection of anonymous usage data to improve the mongosh CLI
+    passwordPrompt                             Prompts the user for a password
+    sleep                                      Sleep for the specified number of milliseconds
+    print                                      Prints the contents of an object to the output
+    printjson                                  Alias for print()
+    convertShardKeyToHashed                    Returns the hashed value for the input using the same hashing function as a hashed index.
+    cls                                        Clears the screen like console.clear()
+    isInteractive                              Returns whether the shell will enter or has entered interactive mode
+
+  For more information on usage: https://docs.mongodb.com/manual/reference/method
+test> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   72.00 KiB
+test> use shopDB
+switched to db shopDB
+shopDB> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   72.00 KiB
+shopDB> db
+shopDB
+shopDB> db.products.insertOne({_id: 1, name: "Pen", price: 1.20})
+{ acknowledged: true, insertedId: 1 }
+shopDB> show collections
+products
+shopDB> db
+shopDB
+shopDB> db.products.insertOne({_id: 2, name: "Pencil", price: 0.80})
+{ acknowledged: true, insertedId: 2 }
+shopDB> db.products.find()
+[
+  { _id: 1, name: 'Pen', price: 1.2 },
+  { _id: 2, name: 'Pencil', price: 0.8 }
+]
+shopDB> db.products.find({name: "Pencil"})
+[ { _id: 2, name: 'Pencil', price: 0.8 } ]
+shopDB> db.products.find({price: {$gt:1}})
+[ { _id: 1, name: 'Pen', price: 1.2 } ]
+shopDB> db.products.find({_id: 1}, {name:1})
+[ { _id: 1, name: 'Pen' } ]
+shopDB> db.products.find({_id: 1}, {name:1, _id:0})
+[ { name: 'Pen' } ]
+shopDB> db.products.updateOne({id: 1}, {$set: {stock: 32}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+shopDB> db.products.find()
+[
+  { _id: 1, name: 'Pen', price: 1.2 },
+  { _id: 2, name: 'Pencil', price: 0.8 }
+]
+shopDB> db.products.updateOne({_id: 1}, {$set: {stock: 32}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+shopDB> db.products.find()
+[
+  { _id: 1, name: 'Pen', price: 1.2, stock: 32 },
+  { _id: 2, name: 'Pencil', price: 0.8 }
+]
+shopDB> db.products.updateOne({_id:2}, {$set: {stock: 12}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+shopDB> db.products.find()
+[
+  { _id: 1, name: 'Pen', price: 1.2, stock: 32 },
+  { _id: 2, name: 'Pencil', price: 0.8, stock: 12 }
+]
+shopDB> db.products.deleteOne({_id: 2})
+{ acknowledged: true, deletedCount: 1 }
+shopDB> db.products.find()
+[ { _id: 1, name: 'Pen', price: 1.2, stock: 32 } ]
+shopDB> db.products.insert({
+...   _id: 3,
+...   name: "Rubber",
+...   price: 1.30,
+...   stock: 43,
+...   reviews: [
+...     { authorname: "Sally", rating: 5, review: "Best rubber ever!" }, {
+...       authorname: "John", rating: 5, review: "Awesome rubber!"
+...     }
+...   ]
+... })
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{ acknowledged: true, insertedIds: { '0': 3 } }
+shopDB> db.products.insert({
+...   _id: 3,
+...   name: "Rubber",
+...   price: 1.30,
+...   stock: 43,
+...   reviews: [
+...     { authorname: "Sally", rating: 5, review: "Best rubber ever!" }, {
+...       authorname: "John", rating: 5, review: "Awesome rubber!"
+...     }
+...   ]
+... 
+... 
+... }
+... }}
+Uncaught:
+SyntaxError: Unexpected token, expected "," (14:0)
+
+  12 |
+  13 | }
+> 14 | }}
+     | ^
+  15 |
+
+shopDB> db.products.insertOne({
+...   _id: 3,
+...   name: "Rubber",
+...   price: 1.30,
+...   stock: 43,
+...   reviews: [
+...     { authorname: "Sally", rating: 5, review: "Best rubber ever!" }, {
+...       authorname: "John", rating: 5, review: "Awesome rubber!"
+...     }
+...   ]
+... })
+MongoServerError: E11000 duplicate key error collection: shopDB.products index: _id_ dup key: { _id: 3 }
+shopDB> db.products.find()
+[
+  { _id: 1, name: 'Pen', price: 1.2, stock: 32 },
+  {
+    _id: 3,
+    name: 'Rubber',
+    price: 1.3,
+    stock: 43,
+    reviews: [
+      { authorname: 'Sally', rating: 5, review: 'Best rubber ever!' },
+      { authorname: 'John', rating: 5, review: 'Awesome rubber!' }
+    ]
+  }
+]
+shopDB> db.products.insertOne({
+...   _id: 2,
+...   name: "Pencil",
+...   price: 0.80,
+...   stock: 12,
+...   reviews: [
+...     { authorname: "CENA", rating: 3, review: "Phattest Pencil!" }, {
+...       authorname: "Walley", rating: 5, review: "Scratchy scritch yurrr!"
+...     }
+...   ]
+... })
+{ acknowledged: true, insertedId: 2 }
+shopDB> db.products.find()
+[
+  { _id: 1, name: 'Pen', price: 1.2, stock: 32 },
+  {
+    _id: 3,
+    name: 'Rubber',
+    price: 1.3,
+    stock: 43,
+    reviews: [
+      { authorname: 'Sally', rating: 5, review: 'Best rubber ever!' },
+      { authorname: 'John', rating: 5, review: 'Awesome rubber!' }
+    ]
+  },
+  {
+    _id: 2,
+    name: 'Pencil',
+    price: 0.8,
+    stock: 12,
+    reviews: [
+      { authorname: 'CENA', rating: 3, review: 'Phattest Pencil!' },
+      {
+        authorname: 'Walley',
+        rating: 5,
+        review: 'Scratchy scritch yurrr!'
+      }
+    ]
+  }
+]
+shopDB> 
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+shopDB> 
+jessiehe@Jessies-MacBook-Air ~ % 
