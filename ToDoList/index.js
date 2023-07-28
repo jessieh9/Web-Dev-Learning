@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
+import _ from "lodash";
 
 const app = express();
 const port = 3000;
@@ -14,7 +15,7 @@ var days = today.getDay();
 // var itemsList = ["Example ToDo"];
 // var worksList = ["Example Work"];
 
-mongoose.connect('mongodb://localhost:27017/todolistDB');
+mongoose.connect('mongodb+srv://admin-jessie:19762003ZHBJ05@cluster0.jd8pq12.mongodb.net/todolistDB');
 
 const itemSchema = new mongoose.Schema({
     name: {
@@ -43,14 +44,13 @@ const item3 = new Item({
     category: "Work"
 });
 
-// Item.insertMany([item1, item2, item3])
-//     .then(function () {
-//         console.log("Successfully saved items into the DB");
-//     })
-//     .catch(function (err) {
-//         console.log(err);
-//     });
+// schema and model for custom list
+const listSchema = new mongoose.Schema({
+    name: String,
+    items: [itemSchema]
+});
 
+const List = mongoose.model("List", listSchema);
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -69,14 +69,6 @@ app.get("/", (req, res) => {
         }).catch(function (err) {
             console.log(err);
         });
-
-    // res.render("index.ejs", {
-    //     typeofList: "Today",
-    //     itemList: itemsList,
-    //     day: daysOfWeek[days],
-    //     date: dates,
-    //     month: months[mon],
-    // });
 });
 
 app.get("/work", (req, res) => {
@@ -93,16 +85,36 @@ app.get("/work", (req, res) => {
         }).catch(function (err) {
             console.log(err);
         });
-    // res.render("index.ejs", {
-    //     typeofList: "Work",
-    //     itemList: worksList,
-    //     day: daysOfWeek[days],
-    //     date: dates,
-    //     month: months[mon],
-    // });
+});
+
+// dynamic routes for custom lists
+app.get("/:customListName", (req, res) => {
+    const customList = _.capitalize(req.params.customListName);
+    List.findOne({ name: customList }).then(function (foundList) {
+        if (!foundList) {
+            const list = new List({
+                name: customList,
+                items: [item1],
+            });
+            list.save();
+            res.redirect("/" + customList);
+        } else {
+            console.log("Already found the list");
+            res.render("index.ejs", {
+                typeofList: customList,
+                itemList: foundList.items,
+                day: daysOfWeek[days],
+                date: dates,
+                month: months[mon],
+            })
+        }
+    }).catch(function (err) {
+        console.log(err);
+    })
 });
 
 app.post("/", (req, res) => {
+    console.log(req.body);
     if (req.body.list === "Work") {
         const newPosting = new Item({
             name: req.body["newItem"],
@@ -111,7 +123,7 @@ app.post("/", (req, res) => {
         newPosting.save();
         // worksList.push(req.body["newItem"]);
         res.redirect("/work");
-    } else {
+    } else if (req.body.list === "Today") {
         const newPosting = new Item({
             name: req.body["newItem"],
             category: "Today",
@@ -119,7 +131,32 @@ app.post("/", (req, res) => {
         newPosting.save();
         // itemsList.push(req.body["newItem"]);
         res.redirect("/");
+    } else {
+        // custom list
+        const newPosting = new Item({
+            name: req.body["newItem"],
+            category: req.body.list,
+        });
+        List.findOne({ name: req.body.list }).then(function (foundList) {
+            foundList.items.push(newPosting);
+            foundList.save();
+            res.redirect("/" + req.body.list);
+        });
     }
+});
+
+// Tackles deletion 
+app.post("/delete", (req, res) => {
+    // console.log(req.body);
+    const checkedItem = req.body.checked;
+    Item.findByIdAndRemove(checkedItem)
+        .then(function () {
+            console.log(`Deleted item succesfully`);
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+    res.redirect("/");
 });
 
 app.listen(port, () => {
