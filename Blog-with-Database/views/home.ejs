@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+    <link rel="stylesheet" href="styles.css">
+
+    <h1>Home</h1>
+    <p>
+        <%=content %>
+    </p>
+    <% console.log(journal); %>
+        <% journal.forEach(entry=> { %>
+            <h1>
+                <%= entry.postTitle %>
+            </h1>
+            <p>
+                <%= entry.postBody.substring(0, 100) + " ..." %>
+                    <a href="/posts/<%= entry._id %>">Read more</a>
+            </p>
+            <%}); %>
+
+
+
+                <%- include("partials/footer.ejs") %>

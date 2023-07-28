@@ -1,0 +1,250 @@
+/* This is for the static ejs files styling so the footer doesn't need to move with the content */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: left;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    flex: 0 0 auto;
+}
+
+h1 {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+p {
+    color: grey;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 20px;
+}
+
+textarea {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#title {
+    padding: 12px 20px;
+}
+
+button {
+    width: 150px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: #3586ff;
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+    font-size: 2rem;
+}
+
+input[type="text"] {
+    border-color: solid lightgrey;
+    height: 60px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    /* outline: none; */
+    box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+::placeholder {
+    color: lightgray;
+    opacity: 1;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.footer-padding {
+    padding-bottom: 60px;
+}
+
+/* .footer p {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #fff;
+} */
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;
+}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #ccc;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-15px);
+    color: blue;
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #ccc;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.copyright {
+    color: white;
+}
+
+/*wave and animation*/
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://i.ibb.co/rZt4Nhg/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 0;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
