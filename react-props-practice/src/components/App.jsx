@@ -1,26 +1,23 @@
 import React from "react";
 import Card from "./Card";
 import contacts from "../contacts";
+import { create } from "lodash";
+
+function createCard(contact) {
+  return <Card
+    key={contact.id}  // needs to be unique across all cards
+    name={contact.name}
+    image={contact.imgURL}
+    num={contact.phone}
+    email={contact.email}
+  />
+}
 
 function App() {
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
-      <Card
-        name={contacts[0].name}
-        image={contacts[0].imgURL}
-        num={contacts[0].phone}
-        email={contacts[0].email} />
-      <Card
-        name={contacts[1].name}
-        image={contacts[1].imgURL}
-        num={contacts[1].phone}
-        email={contacts[1].email} />
-      <Card
-        name={contacts[2].name}
-        image={contacts[2].imgURL}
-        num={contacts[2].phone}
-        email={contacts[2].email} />
+      {contacts.map(createCard)}
     </div>
   );
 }
