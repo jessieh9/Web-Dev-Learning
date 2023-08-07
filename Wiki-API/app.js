@@ -83,6 +83,7 @@ app.route("/articles/:articleTitle")
             });
     });
 
+// non-combined
 // app.get("/articles", (req, res) => {
 //     Article.find()
 //         .then(function (foundArticles) {
