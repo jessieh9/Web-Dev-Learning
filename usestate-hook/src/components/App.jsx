@@ -1,3 +1,4 @@
+// simple incrementer with two buttons for increase and decrease
 import React from "react";
 
 function App() {
