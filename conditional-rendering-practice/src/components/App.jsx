@@ -13,3 +13,8 @@ function App() {
 }
 
 export default App;
+
+
+// another way to do this is to have a Form component like Login and have a 
+// conditional in the field of confirm password such that it shows if 
+// the user is registered and if not then will be false.
