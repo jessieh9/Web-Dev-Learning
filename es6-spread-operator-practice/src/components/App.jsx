@@ -1,8 +1,10 @@
 import React from "react";
 
 function App() {
+  // for text input and add button
   const [inputText, setInputText] = React.useState("");
   const [items, setItems] = React.useState([]);
+  // button styling
   const [buttonColor, setButtonColor] = React.useState("white");
   const [buttonTextColor, setButtonTextColor] = React.useState("black");
 
