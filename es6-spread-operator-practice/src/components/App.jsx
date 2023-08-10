@@ -48,6 +48,7 @@ function App() {
       </div>
       <div>
         <ul>
+{/*           {items.map(todo=><li>{todo}</li>)} will work the same, the but the bottom is just styled with sandbox  */}
           {items.map((item) => (
             <li>{item}</li>
           ))}
