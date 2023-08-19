@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    font-family: "Poppins";
 }
 
 nav {
@@ -17,9 +18,63 @@ nav {
     max-width: 100px;
 }
 
-.grid{
-    /* align-items: center;
-    justify-content: center; */
-    height: 500px;
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
+.hero--photo {
+    height: 500px;
+    /* padding: 20px; */
+    align-self: center;
+}
+
+.hero--header {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero--text {
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0;
+    float: left;
+}
+
+.card {
+    padding: 20px;
+    font-family: "Poppins";
+}
+
+.card--img {
+    width: "200px";
+    height: "300px";
+    border-radius: 10px;
+}
+
+.rating--img {
+    padding-right: 10px;
+}
+
+.card--rating {
+    display: flex;
+    color: gray;
+    font-family: "Poppins";
+}
+
+.card--rating img {
+    margin-right: 10px;
+}
+
+.card--text-title,
+.card--text {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .hero--photo {
+        width: 100%;
+        /* height: 500px; */
+    }
 }
