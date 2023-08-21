@@ -95,7 +95,7 @@ nav {
 }
 
 .card-description {
-    width: 200px;
+    /* width: fit-content; */
     padding: 0;
     margin: 0;
 }
