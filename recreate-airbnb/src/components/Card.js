@@ -4,10 +4,16 @@ import star from "../images/star.png";
 
 export default function Card(props) {
     const [eventDescription, setDescription] = React.useState("");
+    const [twoClick, setTwoClick] = React.useState(false);
 
     function handleImgClick() {
         console.log("Clicked");
         setDescription(props.description);
+        setTwoClick(false);
+    }
+
+    function handleDoubleCick() {
+        setTwoClick(true);
     }
 
     let badgeText;
@@ -30,9 +36,9 @@ export default function Card(props) {
             </div>
             <div className="card--info">
                 <p className="card--text-title">{props.title}</p>
-                <button onClick={handleImgClick} className="card--btn">...</button>
+                <button onClick={handleImgClick} onDoubleClick={handleDoubleCick} className="card--btn">...</button>
             </div>
-            <p className="card--description">{eventDescription}</p>
+            {!twoClick && <p className="card--description">{eventDescription}</p>}
             <p className="card--text"><strong>From ${props.price}</strong> / person</p>
         </div>
     );
