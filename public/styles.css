@@ -1,0 +1,104 @@
+.App {
+    /* width: 80%; */
+    max-width: 1200px;
+    width: 95vw;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #fffbf4;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+.nav {
+    display: flex;
+    box-shadow: 0 2.98256px 7.4564px rgba(255, 82, 82, .397);
+    background-color: #F55A5A;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+}
+
+.nav--logo {
+    align-self: center;
+    border-radius: 50%;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.nav--title {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.card {
+    display: flex;
+    padding: 3em;
+}
+
+.card:not(:last-child) {
+    box-shadow: 0 45px 4px -45px #cacaca;
+}
+
+.card--info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.card--img {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card--location {
+    align-items: center;
+    display: flex;
+    max-height: 1em;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.card--pin {
+    width: 13px;
+    margin-right: 5px;
+}
+
+.card--country {
+    margin-right: 25px;
+}
+
+.card--title {
+    font-weight: 700;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+}
+
+.card--date {
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-weight: 200;
+    margin-right: 0;
+    padding-right: 0;
+    letter-spacing: 3px;
+}
+
+a {
+    align-self: center;
+    color: gray;
+    font-size: 15px;
+}
