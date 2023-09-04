@@ -15,6 +15,11 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    margin-bottom: 200px;
+    color: blue;
+}
+
 h1 {
     color: white;
     font-family: "Titan One";
@@ -42,7 +47,7 @@ button {
 }
 
 .card {
-    background: url("../images/laugh.jpeg");
+    background: url("../images/joke-image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
